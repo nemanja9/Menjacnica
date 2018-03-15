@@ -9,11 +9,8 @@ public class MenjanjeKursa implements  MenjacnicaInterfejs{
 	public void dodajKursValute(GregorianCalendar dan, double kurs) {
 		Valuta valuta = new Valuta();
 		valuta.setDatum(dan);
-<<<<<<< HEAD
-		valuta.setProdajniKurs(kurs);
-=======
 		valuta.setKupovniKurs(kurs);
->>>>>>> refs/heads/implementacijainterfejsa
+
 		
 	}
 
