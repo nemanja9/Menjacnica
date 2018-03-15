@@ -1,12 +1,15 @@
 import java.util.GregorianCalendar;
 
+import Valuta.Valuta;
 import interfejs.MenjacnicaInterfejs;
 
 public class MenjanjeKursa implements  MenjacnicaInterfejs{
 
 	@Override
 	public void dodajKursValute(GregorianCalendar dan, double kurs) {
-		// TODO Auto-generated method stub
+		Valuta valuta = new Valuta();
+		valuta.setDatum(dan);
+		valuta.setProdajniKurs(kurs);
 		
 	}
 
