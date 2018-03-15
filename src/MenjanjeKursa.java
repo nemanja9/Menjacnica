@@ -9,19 +9,26 @@ public class MenjanjeKursa implements  MenjacnicaInterfejs{
 	public void dodajKursValute(GregorianCalendar dan, double kurs) {
 		Valuta valuta = new Valuta();
 		valuta.setDatum(dan);
+<<<<<<< HEAD
 		valuta.setProdajniKurs(kurs);
+=======
+		valuta.setKupovniKurs(kurs);
+>>>>>>> refs/heads/implementacijainterfejsa
 		
 	}
 
 	@Override
 	public void obrisiKursValute(GregorianCalendar dan) {
-		// TODO Auto-generated method stub
+		Valuta valuta = new Valuta();
+		valuta.setKupovniKurs(0);
 		
 	}
 
 	@Override
 	public double vratiKursZaNekiDan(GregorianCalendar dan) {
-		// TODO Auto-generated method stub
+		Valuta valuta = new Valuta();
+		if (valuta.getDatum().equals(dan))
+			return valuta.getKupovniKurs();
 		return 0;
 	}
 
