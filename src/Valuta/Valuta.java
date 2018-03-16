@@ -14,54 +14,60 @@ public class Valuta {
 		return naziv;
 	}
 
-	public void setNaziv(String naziv) {
+	public void setNaziv(String naziv) throws Exception {
 		if(naziv != null && naziv.length()>0)
 		this.naziv = naziv;
+		else throw new Exception("Naziv ne moze biti prazan");
 	}
 
 	public String getSkraceni() {
 		return skraceni;
 	}
 
-	public void setSkraceni(String skraceni) {
+	public void setSkraceni(String skraceni) throws Exception {
 		if(skraceni != null && skraceni.length()>0)
 		this.skraceni = skraceni;
+		else throw new Exception("Skraceni naziv ne moze biti prazan");
 	}
 
 	public GregorianCalendar getDatum() {
 		return datum;
 	}
 
-	public void setDatum(GregorianCalendar datum) {
+	public void setDatum(GregorianCalendar datum) throws Exception {
 		if (datum.after(new GregorianCalendar()))
 		this.datum = datum;
+		else throw new Exception("Datum mora biti u buducnosti");
 	}
 
 	public double getKupovniKurs() {
 		return kupovniKurs;
 	}
 
-	public void setKupovniKurs(double kupovniKurs) {
-		if (kupovniKurs >0)
+	public void setKupovniKurs(double kupovniKurs) throws Exception {
+		if (kupovniKurs >=0)
 		this.kupovniKurs = kupovniKurs;
+		else throw new Exception("Kurs ne moze biti negativan broj");
 	}
 
 	public double getProdajniKurs() {
 		return prodajniKurs;
 	}
 
-	public void setProdajniKurs(double prodajniKurs) {
-		if (prodajniKurs >0)
+	public void setProdajniKurs(double prodajniKurs) throws Exception {
+		if (prodajniKurs >=0)
 		this.prodajniKurs = prodajniKurs;
+		else throw new Exception("Kurs ne moze biti negativan broj");
 	}
 
 	public double getSrednjiKurs() {
 		return srednjiKurs;
 	}
 
-	public void setSrednjiKurs(double srednjiKurs) {
-		if (srednjiKurs >0)
+	public void setSrednjiKurs(double srednjiKurs) throws Exception {
+		if (srednjiKurs >=0)
 		this.srednjiKurs = srednjiKurs;
+		else throw new Exception("Kurs ne moze biti negativan broj");
 	}
 
 	@Override
